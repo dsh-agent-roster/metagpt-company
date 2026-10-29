@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/STofone/dsh-agent-roster/main/schema/registry.v1.schema.json",
+  "kind": "dsh-agent-roster-registry/v1",
+  "version": 1,
+  "generatedAt": "2026-10-30T00:00:00.000Z",
+  "generator": "STofone/dsh-roster-metagpt-company (hand-maintained)",
+  "source": "https://github.com/STofone/dsh-roster-metagpt-company",
+  "collections": [
+    {
+      "id": "metagpt-company",
+      "title": "MetaGPT 软件公司（迁移）",
+      "description": "把 MetaGPT（5 万星+，MIT）的软件公司角色拆成档案：产品经理、架构师、项目经理、工程师，字段取自上游 Role 的 profile/goal/constraints。",
+      "repo": "github:STofone/dsh-roster-metagpt-company",
+      "ref": "main",
+      "path": "rosters",
+      "rosters": [
+        "metagpt-company"
+      ],
+      "tags": [
+        "software-company",
+        "sdlc",
+        "metagpt"
+      ],
+      "license": "MIT",
+      "maintainers": [
+        "STofone"
+      ],
+      "homepage": "https://github.com/STofone/dsh-roster-metagpt-company"
+    }
+  ]
+}
