@@ -2,7 +2,7 @@
 
 **English** | [简体中文](README.zh.md)
 
-An [Agent Roster](https://github.com/STofone/dsh-agent-roster) archive: the upstream team's role definitions
+An [Agent Roster](https://github.com/dsh-agent-roster/dsh-agent-roster) archive: the upstream team's role definitions
 converted into a `roster.yaml`, with fields mapped one to one. Drop it into your local roster library and run
 it on top of `dsh-agent-teams`.
 

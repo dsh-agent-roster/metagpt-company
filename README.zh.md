@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-一份 [Agent Roster](https://github.com/STofone/dsh-agent-roster) 档案：把上游团队的角色定义迁成
+一份 [Agent Roster](https://github.com/dsh-agent-roster/dsh-agent-roster) 档案：把上游团队的角色定义迁成
 `roster.yaml`，字段与上游一一对应，可以直接装进本机档案库、挂到 dsh-agent-teams 上跑。
 
 ## 上游
