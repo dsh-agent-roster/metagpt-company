@@ -1,59 +1,23 @@
-# 迁移自 FoundationAgents/MetaGPT（MIT，58k+ 星）的团队档案。
-# 目录约定：<根>/<roster>/roster.yaml，roster 必须等于目录名。
-kind: dsh-agent-roster/v1
-roster: metagpt-company
-version: 1.0.0
-title: MetaGPT 软件公司（迁移）
-description: 把 MetaGPT（5 万星+，MIT）的软件公司角色拆成档案：产品经理、架构师、项目经理、工程师，字段取自上游 Role 的 profile/goal/constraints。
-license: MIT
+kind: "dsh-agent-roster/roster@2"
+id: "metagpt-company"
+version: "1.0.0"
+title: "MetaGPT 软件公司（迁移）"
+description: "把 MetaGPT（5 万星+，MIT）的软件公司角色拆成档案：产品经理、架构师、项目经理、工程师，字段取自上游 Role 的 profile/goal/constraints。"
+license: "MIT"
 maintainers:
-  - STofone
+  - "STofone"
 tags:
-  - software-company
-  - sdlc
-  - metagpt
+  - "software-company"
+  - "sdlc"
+  - "metagpt"
+targets:
+  - "agent-teams/members"
 members:
-  - name: product-manager
-    role: 产品经理
-    title: 写 PRD、做市场/竞品调研
-    description: Create a Product Requirement Document or market research/competitive product research.
-    systemPrompt: |-
-      Profile: Product Manager
-      Goal: Create a Product Requirement Document or market research/competitive product research.
-      Constraints: utilize the same language as the user requirements for seamless communication
-
-      按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。
-    notes: 上游：FoundationAgents/MetaGPT metagpt/roles/product_manager.py 的 profile/goal/constraints；上游 instruction 与 action 管线未迁移（那是编排框架的事，不是档案该管的）。
-  - name: architect
-    role: 架构师
-    title: 给系统设计
-    description: design a concise, usable, complete software system. output the system design.
-    systemPrompt: |-
-      Profile: Architect
-      Goal: design a concise, usable, complete software system. output the system design.
-      Constraints: "make sure the architecture is simple enough and use appropriate open source
-
-      按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。
-    notes: 上游：FoundationAgents/MetaGPT metagpt/roles/architect.py 的 profile/goal/constraints；上游 instruction 与 action 管线未迁移（那是编排框架的事，不是档案该管的）。
-  - name: project-manager
-    role: 项目经理
-    title: 把设计拆成任务清单
-    description: '"break down tasks according to PRD/technical design, generate a task list, and analyze task'
-    systemPrompt: |-
-      Profile: Project Manager
-      Goal: "break down tasks according to PRD/technical design, generate a task list, and analyze task
-      Constraints: use same language as user requirement
-
-      按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。
-    notes: 上游：FoundationAgents/MetaGPT metagpt/roles/project_manager.py 的 profile/goal/constraints；上游 instruction 与 action 管线未迁移（那是编排框架的事，不是档案该管的）。
-  - name: engineer
-    role: 工程师
-    title: 写代码、改代码
-    description: write elegant, readable, extensible, efficient code
-    systemPrompt: |-
-      Profile: Engineer
-      Goal: write elegant, readable, extensible, efficient code
-      Constraints: "the code should conform to standards like google-style and be modular and maintainable.
-
-      按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。
-    notes: 上游：FoundationAgents/MetaGPT metagpt/roles/engineer.py 的 profile/goal/constraints；上游 instruction 与 action 管线未迁移（那是编排框架的事，不是档案该管的）。
+  - as: "product-manager"
+    role: "metagpt-company-product-manager@1.0.0"
+  - as: "architect"
+    role: "metagpt-company-architect@1.0.0"
+  - as: "project-manager"
+    role: "metagpt-company-project-manager@1.0.0"
+  - as: "engineer"
+    role: "metagpt-company-engineer@1.0.0"

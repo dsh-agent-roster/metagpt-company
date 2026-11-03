@@ -32,7 +32,9 @@ npx --yes @stofone/dsh-agent-roster@latest list --dir rosters
 
 ```
 registry.json                     公共索引条目（供 registry fetch 校验）
-rosters/metagpt-company/roster.yaml  档案本体
+roles/*/AGENT.md                  角色人设：frontmatter 是参数，正文是提示词
+rosters/metagpt-company/roster.yaml   组装（成员按 name@version 引用角色）
+dist/metagpt-company-1.0.0.json       客户端真正拉取的编译产物
 .github/workflows/validate.yml    push 时自动校验
 ```
 

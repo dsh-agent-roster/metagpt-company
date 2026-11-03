@@ -1,0 +1,144 @@
+{
+  "kind": "dsh-agent-roster/compiled@1",
+  "source": {
+    "roster": "metagpt-company",
+    "version": "1.0.0",
+    "title": "MetaGPT 软件公司（迁移）",
+    "repo": null,
+    "ref": null,
+    "lock": null,
+    "file": "roster.yaml"
+  },
+  "targets": [
+    "agent-teams/members"
+  ],
+  "captain": null,
+  "members": [
+    {
+      "name": "product-manager",
+      "role": "产品经理",
+      "roleRef": "metagpt-company-product-manager@1.0.0",
+      "roleName": "metagpt-company-product-manager",
+      "roleVersion": "1.0.0",
+      "provider": null,
+      "model": null,
+      "reasoningEffort": null,
+      "toolPolicy": null,
+      "executionPrompt": "Profile: Product Manager\nGoal: Create a Product Requirement Document or market research/competitive product research.\nConstraints: utilize the same language as the user requirements for seamless communication\n\n按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。",
+      "promptStats": {
+        "chars": 255,
+        "parts": [
+          {
+            "path": "roles/metagpt-company-product-manager/AGENT.md",
+            "kind": "body+parts"
+          },
+          {
+            "path": "body",
+            "kind": "part"
+          }
+        ],
+        "sha256": "8d0a33bfe6fc1f8b390ce0a4e9e86239a3414fd248387714ae1b62aa43a63b30"
+      },
+      "provenance": {
+        "role": "metagpt-company-product-manager@1.0.0",
+        "sha256": "8abbfad7"
+      }
+    },
+    {
+      "name": "architect",
+      "role": "架构师",
+      "roleRef": "metagpt-company-architect@1.0.0",
+      "roleName": "metagpt-company-architect",
+      "roleVersion": "1.0.0",
+      "provider": null,
+      "model": null,
+      "reasoningEffort": null,
+      "toolPolicy": null,
+      "executionPrompt": "Profile: Architect\nGoal: design a concise, usable, complete software system. output the system design.\nConstraints: \"make sure the architecture is simple enough and use appropriate open source\n\n按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。",
+      "promptStats": {
+        "chars": 239,
+        "parts": [
+          {
+            "path": "roles/metagpt-company-architect/AGENT.md",
+            "kind": "body+parts"
+          },
+          {
+            "path": "body",
+            "kind": "part"
+          }
+        ],
+        "sha256": "edc454d74c80aada6ee59513a1ef25f749d26629fbbf94315e90967c6aae958b"
+      },
+      "provenance": {
+        "role": "metagpt-company-architect@1.0.0",
+        "sha256": "9f5bad95"
+      }
+    },
+    {
+      "name": "project-manager",
+      "role": "项目经理",
+      "roleRef": "metagpt-company-project-manager@1.0.0",
+      "roleName": "metagpt-company-project-manager",
+      "roleVersion": "1.0.0",
+      "provider": null,
+      "model": null,
+      "reasoningEffort": null,
+      "toolPolicy": null,
+      "executionPrompt": "Profile: Project Manager\nGoal: \"break down tasks according to PRD/technical design, generate a task list, and analyze task\nConstraints: use same language as user requirement\n\n按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。",
+      "promptStats": {
+        "chars": 220,
+        "parts": [
+          {
+            "path": "roles/metagpt-company-project-manager/AGENT.md",
+            "kind": "body+parts"
+          },
+          {
+            "path": "body",
+            "kind": "part"
+          }
+        ],
+        "sha256": "bb0143192ef57edceb7c3cb35505f56924dc52c27cf83bac1147b0c3fe2309fb"
+      },
+      "provenance": {
+        "role": "metagpt-company-project-manager@1.0.0",
+        "sha256": "ebe844f9"
+      }
+    },
+    {
+      "name": "engineer",
+      "role": "工程师",
+      "roleRef": "metagpt-company-engineer@1.0.0",
+      "roleName": "metagpt-company-engineer",
+      "roleVersion": "1.0.0",
+      "provider": null,
+      "model": null,
+      "reasoningEffort": null,
+      "toolPolicy": null,
+      "executionPrompt": "Profile: Engineer\nGoal: write elegant, readable, extensible, efficient code\nConstraints: \"the code should conform to standards like google-style and be modular and maintainable.\n\n按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。",
+      "promptStats": {
+        "chars": 224,
+        "parts": [
+          {
+            "path": "roles/metagpt-company-engineer/AGENT.md",
+            "kind": "body+parts"
+          },
+          {
+            "path": "body",
+            "kind": "part"
+          }
+        ],
+        "sha256": "d6f7e377b25b7db621d3e642289e3f3e64f1bea62e793a7a77c0eab6df0fb5a7"
+      },
+      "provenance": {
+        "role": "metagpt-company-engineer@1.0.0",
+        "sha256": "79f962fa"
+      }
+    }
+  ],
+  "orchestration": null,
+  "declarations": [],
+  "requires": {
+    "skills": [],
+    "toolPolicies": []
+  }
+}

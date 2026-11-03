@@ -35,9 +35,11 @@ With DSH installed, open the panel's "Sources" tab, add this repository's collec
 ## Files
 
 ```
-registry.json                         public registry entry (used by registry fetch)
-rosters/metagpt-company/roster.yaml   the roster itself
-.github/workflows/validate.yml        validation on push
+registry.json                     public registry entry (used by registry fetch)
+roles/*/AGENT.md                  personas: frontmatter = parameters, body = prompt
+rosters/metagpt-company/roster.yaml   the assembly (members reference roles by name@version)
+dist/metagpt-company-1.0.0.json       the compiled artifact clients actually pull
+.github/workflows/validate.yml    validation on push
 ```
 
 ## License
