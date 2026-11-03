@@ -13,10 +13,10 @@ jobs:
         with:
           node-version: 22
       - name: validate rosters
-        run: npx --yes @stofone/dsh-agent-roster@^0.13.0 validate --dir .
+        run: npx --yes @stofone/dsh-agent-roster@^1.0.0 validate --dir .
       - name: validate registry
-        run: npx --yes @stofone/dsh-agent-roster@^0.13.0 registry validate --file registry.json
+        run: npx --yes @stofone/dsh-agent-roster@^1.0.0 registry validate --file registry.json
       - name: compiled artifacts are in sync with their sources
         run: |
-          npx --yes @stofone/dsh-agent-roster@^0.13.0 compile --roster rosters/metagpt-company --repo dsh-agent-roster/metagpt-company --write
+          npx --yes @stofone/dsh-agent-roster@^1.0.0 compile --roster rosters/metagpt-company --repo dsh-agent-roster/metagpt-company --write
           git diff --exit-code dist/

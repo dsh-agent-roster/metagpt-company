@@ -1,0 +1,10 @@
+kind: dsh-agent-roster/space@1
+space: metagpt-company
+title: metagpt-company 示例档案
+description: 一份从 metagpt 公司编制迁过来的 v2 档案。
+license: MIT
+maintainers:
+  - STofone
+layout: monorepo
+rosters:
+  - id: metagpt-company
