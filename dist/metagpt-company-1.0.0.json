@@ -4,6 +4,16 @@
     "roster": "metagpt-company",
     "version": "1.0.0",
     "title": "MetaGPT 软件公司（迁移）",
+    "description": "把 MetaGPT（5 万星+，MIT）的软件公司角色拆成档案：产品经理、架构师、项目经理、工程师，字段取自上游 Role 的 profile/goal/constraints。",
+    "tags": [
+      "software-company",
+      "sdlc",
+      "metagpt"
+    ],
+    "license": "MIT",
+    "maintainers": [
+      "STofone"
+    ],
     "repo": "dsh-agent-roster/metagpt-company",
     "ref": "main",
     "lock": null,
