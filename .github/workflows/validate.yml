@@ -18,5 +18,5 @@ jobs:
         run: npx --yes @stofone/dsh-agent-roster@^0.10.3 registry validate --file registry.json
       - name: compiled artifacts are in sync with their sources
         run: |
-          npx --yes @stofone/dsh-agent-roster@^0.10.3 compile --roster rosters/metagpt-company --write
+          npx --yes @stofone/dsh-agent-roster@^0.10.3 compile --roster rosters/metagpt-company --repo dsh-agent-roster/metagpt-company --write
           git diff --exit-code dist/

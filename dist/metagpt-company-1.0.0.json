@@ -4,8 +4,8 @@
     "roster": "metagpt-company",
     "version": "1.0.0",
     "title": "MetaGPT 软件公司（迁移）",
-    "repo": null,
-    "ref": null,
+    "repo": "dsh-agent-roster/metagpt-company",
+    "ref": "main",
     "lock": null,
     "file": "roster.yaml"
   },
