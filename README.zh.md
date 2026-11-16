@@ -9,7 +9,7 @@
 
 - 仓库：[`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT/tree/main/metagpt/roles)
 - 许可证：MIT
-- 星标：58k+
+- 星标：71,285
 - 迁移范围：metagpt/roles/{product_manager,architect,project_manager,engineer}.py 的类属性；QA 与 human 角色未迁。
 
 上游文本按原意保留；改动只有三处：字段名换成本档案格式、工具名映射到 DSH 工具名、

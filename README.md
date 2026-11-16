@@ -10,7 +10,7 @@ it on top of `dsh-agent-teams`.
 
 - Repo: [`FoundationAgents/MetaGPT`](https://github.com/FoundationAgents/MetaGPT/tree/main/metagpt/roles)
 - License: MIT
-- Stars: 58k+
+- Stars: 71,285
 - Scope: class attributes of `metagpt/roles/{product_manager,architect,project_manager,engineer}.py`; the QA
   and human roles are not migrated.
 
