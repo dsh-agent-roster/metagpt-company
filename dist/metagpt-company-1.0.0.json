@@ -4,7 +4,7 @@
     "roster": "metagpt-company",
     "version": "1.0.0",
     "title": "MetaGPT 软件公司（迁移）",
-    "description": "把 MetaGPT（5 万星+，MIT）的软件公司角色拆成档案：产品经理、架构师、项目经理、工程师，字段取自上游 Role 的 profile/goal/constraints。",
+    "description": "把 MetaGPT（MIT）的软件公司角色迁成档案：产品经理、架构师、项目经理、工程师，字段取自上游 Role 的 profile/goal/constraints。",
     "tags": [
       "software-company",
       "sdlc",
@@ -22,7 +22,26 @@
   "targets": [
     "agent-teams/members"
   ],
-  "captain": null,
+  "captain": {
+    "role": "metagpt-company-project-manager@1.0.0",
+    "provider": null,
+    "model": null,
+    "reasoningEffort": null,
+    "persona": "Profile: Project Manager\nGoal: \"break down tasks according to PRD/technical design, generate a task list, and analyze task\nConstraints: use same language as user requirement\n\n按上游 MetaGPT 的角色定义工作：先对齐目标与约束，再动手；输出用与用户相同的语言。",
+    "personaPath": null,
+    "personaChars": 220,
+    "personaSha256": "bb0143192ef57edceb7c3cb35505f56924dc52c27cf83bac1147b0c3fe2309fb",
+    "promptStats": {
+      "chars": 220,
+      "parts": [
+        {
+          "path": "roles/metagpt-company-project-manager/AGENT.md",
+          "kind": "body+parts"
+        }
+      ],
+      "sha256": "bb0143192ef57edceb7c3cb35505f56924dc52c27cf83bac1147b0c3fe2309fb"
+    }
+  },
   "members": [
     {
       "name": "product-manager",
@@ -146,8 +165,30 @@
     }
   ],
   "orchestration": null,
-  "handover": [],
-  "declarations": [],
+  "handover": [
+    {
+      "title": "上游改版后重新对照 Role 的 profile/goal/constraints",
+      "detail": "这四个角色的正文是从上游类属性逐字搬来的；上游一改，档案就旧了。",
+      "verify": "diff 上游 metagpt/roles/*.py 与对应 AGENT.md 的正文段落"
+    },
+    {
+      "title": "换代时确认派活入口仍是 project-manager",
+      "detail": "上游的编排在 runtime，不在档案；这里只有角色，没有流水线。",
+      "verify": "新会话首条消息把派活规则写在 project-manager 名下"
+    }
+  ],
+  "declarations": [
+    {
+      "scope": "captain",
+      "field": "route",
+      "note": "config：队长的路由只能由 profile 的 agent-default-model 落地，插件不写运行时"
+    },
+    {
+      "scope": "captain",
+      "field": "persona",
+      "note": "config：需要落到 profile preset 的 persona"
+    }
+  ],
   "requires": {
     "skills": [],
     "toolPolicies": []
